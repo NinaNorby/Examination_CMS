@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination CMS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+        integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Javascript fil -->
+    <script src="index.js" defer></script>
+    <!-- Styleing -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Fontawesome script  -->
+    <script src="https://kit.fontawesome.com/ce8c6a5a73.js" crossorigin="anonymous" derfer></script>
+</head>
+
+<body>
+    <div id="profile-theam">
+        <header id="headerTitle">
+            <h1>Book Ducks!</h1>
+        </header>
+        <main>
+
+
+            <!-- startcontainer UTLOGGAT LÄGE   -->
+            <section id="startContainer">
+                <p class="p1StartContainer">Logga in här nedan</p>
+                <div id="logInCompartment">
+                    <p class="p2StartContainer">Användarnamn</p>
+                    <input type="text" name="" id="loginUser" placeholder="Användarnamn eller email" />
+                    <p class="p2StartContainer">Lösenord</p>
+                    <input type="password" name="" id="loginPassword" placeholder="Lösenord" />
+                    <button id="loginBtn">Logga in </button>
+                </div>
+                <p class="p3StartContainer">Skapa konto </p>
+                <div id="regCompartment">
+                    <p class="p4StartContainer">Användarnamn </p>
+                    <input type="text" name="" id="registerUsername" placeholder="Användarnamn" />
+                    <p class="p4StartContainer">Epostadress </p>
+                    <input type="text" name="" id="registerUserEmail" placeholder="Exempel@email.com" />
+                    <p class="p4StartContainer">Lösenord </p>
+                    <input type="password" name="" id="registerPassword" placeholder="Lösenord" />
+                    <button id="registerBtn">Skapa ett konto här nedan</button>
+                </div>
+                <h2 id="h2StartContainerBookSelection">Här är vårt bokurval på <span id="h2Font"> Book Ducks!</span>
+                </h2>
+                <ul id="welcomePageBookUl" class="bookList"></ul>
+                <img src="/frontend/assets/arrowUp.png" alt="Arrow icon" class="icon arrow"
+                    onclick="location.href='./#headerTitle'" />
+            </section>
+
+
+
+            <!-- loggedInContainer INLOGGAT LÄGE-->
+            <section id="loggedInContainer" style="display: none;">
+                <button id="goToProfile">Gå till min profilsida</button>
+                <button id="logoutBtn">Logga ut</button>
+
+                <h1>Välkommen, <span id="WelcomeUser">User</span></h1>
+                <h2>Våra böcker </h2>
+                <p>Lägg till dina önskade böcker till din profilsida </p>
+                <ul id="loggedInBookUl" class="bookList"></ul>
+            </section>
+
+
+            <!-- myProfileContainer inloggat läge -->
+            <section id="myProfileContainer" style="display: none;">
+                <button id="goBackBtn">Gå tillbaka</button>
+                <h1 style="font-style: italic;">Profilsida</h1>
+
+                <!-- Medveten om att gränsen för hur långt variabelnamn man kan ha är passerat, men detta får jag ändra sen  -->
+                <h2 id="h2myProfileContainerBookSelection">Min läslista</h2>
+                <button id="sortTitleBtn" data-target-list="readListUl">Sortera efter titel</button>
+                <button id="sortAuthorBtn" data-target-list="readListUl">Sortera efter författare</button>
+                <button id="sortRatingBtn" data-target-list="readListUl">Sortera efter betyg</button>
+                <ul id="readListUl" class="bookList"></ul>
+
+
+                <h2 id="h2myProfileContainerRatingSelection">Mina betygsatta böcker</h2>
+                <button id="sortTitleBtnRating" data-target-list="ratingbooksUl">Sortera efter titel</button>
+                <button id="sortAuthorBtnRating" data-target-list="ratingbooksUl">Sortera efter författare</button>
+                <button id="sortRatingBtnRating" data-target-list="ratingbooksUl">Sortera efter betyg</button>
+                <ul id="ratingbooksUl" class="bookList"></ul>
+            </section>
+
+        </main>
+    </div>
+
+    </main>
+
+
+</body>
+
+
+</html>

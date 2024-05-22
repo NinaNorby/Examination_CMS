@@ -1,0 +1,164 @@
+//------------VARIABLER
+//Font Fam.
+$fontfamilyheader: "Pacifico", cursive;
+$fontfamilyH2Span: "Pacifico", cursive;
+$fontfamilyStandard: "Poppins";
+
+//Backroundcolors
+$bgBtn: #959592;
+$bgBtnHover: rgb(230, 226, 226);
+
+// Boxshadow
+$boxShadowBtn: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+  -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+$boxShadowInput: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+  -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+$boxShadowSelectOption: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+  -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+
+//Fontsize &weight
+$fontSizeP13Container: 1.2rem;
+$fontSizeP2Container: 1rem;
+
+$fontWeightPContainer: 600;
+$fontWeightButton: 600;
+
+// ------------Slut på variabler
+
+header {
+  font-family: $fontfamilyheader;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+body {
+  display: flex;
+  justify-content: center;
+
+  background-color: rgb(209, 219, 240);
+  font-family: $fontfamilyStandard;
+
+  #startContainer {
+    display: flex;
+    justify-content: center;
+
+    .icon {
+      cursor: pointer;
+      height: 2rem;
+      right: -5rem;
+
+      .arrow {
+        position: absolute;
+      }
+    }
+    .p1StartContainer,
+    .p3StartContainer {
+      font-size: $fontSizeP13Container;
+      font-weight: $fontWeightPContainer;
+    }
+    .p2StartContainer,
+    .p4startContainer {
+      padding: 0;
+      margin-bottom: 10px;
+      font-size: $fontSizeP2Container;
+    }
+
+    input {
+      border-radius: 4px;
+      border-style: none;
+      padding: 7px;
+      margin-inline: 4px;
+      box-shadow: $boxShadowInput;
+    }
+  }
+  //Font family på ordet Bok ducks
+  section h2 span {
+    font-family: $fontfamilyH2Span;
+  }
+  section h2 p {
+    font-size: 0.5 rem;
+  }
+
+  #h2StartContainerBookSelection {
+    margin-top: 3rem;
+    font-style: normal;
+    text-align: center;
+  }
+
+  //CSS regler för loggedInContainer
+  #loggedInContainer {
+    #goToProfile,
+    #logoutBtn {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+    //drop-down menyn som liger i det inloggade läget
+    #ratingOption {
+      margin-left: 14px;
+      padding: 4px;
+      border-radius: 4px;
+      background-color: rgba(247, 247, 247, 0.25);
+      border: 1px solid black;
+      box-shadow: $boxShadowSelectOption;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba(247, 247, 247, 0.75);
+      }
+    }
+    #confirmButtonSelect {
+      margin-left: 14px;
+      padding: 4px;
+      border-radius: 4px;
+    }
+
+    //CSS regler för myProfileContainer
+  }
+  #myProfileContainer {
+    #h2myProfileContainerBookSelection {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    #h2myProfileContainerRatingSelection {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  //CSS regler som sätts på samtliga <button> <li> och <ul>
+
+  li {
+    
+    width: 100%;
+    margin: 20px auto;
+    padding: 12px 20px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 13px 21px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    list-style: none;
+  }
+  //Knapparna på startsidan
+  button {
+    border-radius: 4px;
+    border: none;
+    // background-color: $bgBtn; //Om strapi temat ej fungerar
+    padding: 7px;
+    margin-bottom: 1rem;
+    font-weight: $fontWeightButton;
+    box-shadow: $boxShadowBtn;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $bgBtnHover;
+      &:active {
+        padding: 4px;
+      }
+    }
+  }
+}

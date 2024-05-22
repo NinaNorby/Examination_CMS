@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ratings",
+  "info": {
+    "singularName": "rating",
+    "pluralName": "ratings",
+    "displayName": "Rating"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rating": {
+      "type": "integer"
+    },
+    "bookID": {
+      "type": "integer"
+    },
+    "userID": {
+      "type": "integer"
+    }
+  }
+}

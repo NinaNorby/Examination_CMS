@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "strapi-plugin-populate-deep": "^3.0.1"
+  }
+}

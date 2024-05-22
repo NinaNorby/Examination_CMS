@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "themes",
+  "info": {
+    "singularName": "theme",
+    "pluralName": "themes",
+    "displayName": "theme",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "Light",
+        "Blue",
+        "Green"
+      ]
+    }
+  }
+}

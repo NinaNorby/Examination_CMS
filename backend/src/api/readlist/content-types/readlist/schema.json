@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "readlists",
+  "info": {
+    "singularName": "readlist",
+    "pluralName": "readlists",
+    "displayName": "readlist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UserID": {
+      "type": "integer",
+      "required": true
+    },
+    "BookID": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
