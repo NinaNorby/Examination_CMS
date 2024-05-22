@@ -1,4 +1,4 @@
-## Individuellt projektarbete - Book Ducks
+## Individuellt projektarbete. Strapi CMS - Book Ducks
 
 Du har fått i uppdrag att ta fram en applikation för bokaffären Book Ducks, där de kan ladda upp böcker som de säljer. Användare ska också kunna logga in, betygsätta samt spara böcker.
 
